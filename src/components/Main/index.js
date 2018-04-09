@@ -4,6 +4,7 @@ import {Route, Switch} from 'react-router-dom';
 
 
 import Home from './home';
+import Addpost from './addpost';
 
 
 export default () => {
@@ -11,6 +12,7 @@ export default () => {
     <div className='main'>
     <Switch>
       <Route exact path ='/' component={Home} />
+      <Route exact path='/addpost' component={Addpost} />
       <Route render={()=><p> Page not found </p>} />
     </Switch>
     </div>
