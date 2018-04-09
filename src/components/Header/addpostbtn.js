@@ -1,10 +1,10 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 
 export default () => {
   return(
     <div className='addpostbtn'>
-      <a href=""> Addpost </a>
+      <Link  className='btn' to='/'>addpost</Link>
     </div>
   );
 }
