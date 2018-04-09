@@ -24,3 +24,12 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+
+.searchform input[type='text'] {
+  width: 300px;
+  font-family: Mina;
+  padding: 3px 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
