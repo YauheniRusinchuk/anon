@@ -1,12 +1,84 @@
 .main {
   width: 95%;
   margin: 60px auto;
-  border: 1px solid black;
 }
 
+
 .addpostview {
-  width: 700px;
-  height: 500px;
-  border: 1px solid red;
-  margin: 0 auto;
+  display: flex;
+}
+
+
+.container {
+	width: 700px;
+	height: 500px;
+	margin: 20px auto;
+	border-radius: 5px;
+
+}
+
+.container span {
+}
+
+
+.container form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+ form .one {
+ 	width: 95%;
+ 	padding: 10px;
+ 	margin: 20px 10px;
+ 	border: 2px solid grey;
+ 	border-radius: 5px;
+ 	font-family: Mina , Arial;
+ 	outline: none;
+ 	color: black;
+ 	font-weight: bold;
+}
+
+form .one:focus {
+	border: 2px solid black;
+	box-shadow: 0 0 10px grey;
+}
+
+form .two {
+	width: 95%;
+	height: 300px;
+	border: 2px solid grey;
+	border-radius: 5px;
+	outline: none;
+	padding: 10px;
+	font-family: Mina, Arial;
+	font-weight: bold;
+	resize: none;
+}
+
+form .two:focus {
+	border: 2px solid black;
+	box-shadow: 0 0 10px grey;
+}
+
+form .button_add_post {
+	width: 95%;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 10px;
+  margin-left: 20px;
+}
+
+
+form .three {
+	background-color: black;
+	border: none;
+	font-family: Mina, Arial;
+	font-weight: bold;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+  box-shadow: 0 0 10px grey;
 }
