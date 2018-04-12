@@ -11,10 +11,18 @@ const mapToStateProps = (state) => {
 class Home extends React.Component {
 
   render(){
+    const {addPost} = this.props
     return(
       <div>
-        {console.log(this.props.addPost)}
-        <h1> HOME </h1>
+        {addPost.map((item)=>{
+          return(
+            <div key={item.id}>
+              <p>{item.title}</p>
+              <p>{item.content}</p>
+              < hr />
+            </div>
+          )
+        })}
       </div>
     );
   }

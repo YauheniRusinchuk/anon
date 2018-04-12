@@ -8,6 +8,11 @@ const initialState = [
     title: "This is first",
     content: "My name is Yauheni"
   },
+  {
+    id: Math.random(),
+    title: "This is second",
+    content: "My second name Rusinchuk"
+  }
 ]
 
 
