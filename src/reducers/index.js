@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import AddPost from 'AddpostReducer';
+import addPost from './AddpostReducer';
 
 
 export default combineReducers({
-  AddPost,
+  addPost,
 });
