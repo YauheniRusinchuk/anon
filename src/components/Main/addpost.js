@@ -4,28 +4,15 @@ import Addpostview from './addpostview';
 
 class Addpost extends React.Component {
 
-  state = {
-    title: '',
-    content: ''
-  }
 
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name] : e.target.value,
-    })
-  }
-
-
-  handleSubmit = (e) => {
+  handleOnSubmit = (e) => {
     e.preventDefault();
+    console.log('onsubmit addpost')
   }
 
   render(){
     return(
-      <Addpostview
-          onSubmit={this.handleSubmit}
-          onChange={this.handleChange}
-      />
+      <Addpostview onSubmit={this.handleOnSubmit}  />
     )
   }
 }
