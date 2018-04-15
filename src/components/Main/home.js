@@ -14,15 +14,7 @@ class Home extends React.Component {
     const {addPost} = this.props
     return(
       <div>
-        {addPost.map((item)=>{
-          return(
-            <div key={item.id}>
-              <p>{item.title}</p>
-              <p>{item.content}</p>
-              < hr />
-            </div>
-          )
-        })}
+        
       </div>
     );
   }

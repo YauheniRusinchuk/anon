@@ -1,13 +1,19 @@
 import React from 'react';
 
 
-export default () => {
+export default ({onSubmit, onChange}) => {
   return(
     <div className='addpostview'>
       <div className="container">
-		     <form>
-			     <input className="one" type="text" placeholder="Title...." />
-		 	     <textarea placeholder="Content..." className="two"></textarea>
+		     <form onSubmit={onSubmit}>
+			     <input className="one" type="text"
+            name = "title"
+            onChange={onChange}
+            placeholder="Title...." />
+		 	     <textarea placeholder="Content..."
+            name = "content"
+            onChange={onChange}
+           className="two"></textarea>
 			     <div className="button_add_post">
 				      <input  className="three" type="submit" value="Add" / >
 			     </div>
