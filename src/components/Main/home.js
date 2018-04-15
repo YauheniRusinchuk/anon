@@ -14,7 +14,7 @@ class Home extends React.Component {
     const {addPost} = this.props
     return(
       <div>
-        
+          {console.log(addPost)}
       </div>
     );
   }

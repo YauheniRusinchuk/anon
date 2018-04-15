@@ -1,8 +1,9 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import Addpost from '../../actions/index';
 
 
 class Addpostview extends React.Component {
-
   constructor(props) {
     super(props)
   }
@@ -14,18 +15,13 @@ class Addpostview extends React.Component {
 
   onSubmit = (e) => {
     this.props.onSubmit(e)
-    console.log('title', this.state.title);
-    console.log('content', this.state.content);
-    this.setState({
-      title: '',
-      content: ''
-    })
+    this.setState({title: '', content: ''})
+    this.props.Addpost(this.state);
   }
 
   onChange = (e) => {
     this.setState({
-      [e.target.name] : e.target.value
-    })
+      [e.target.name] : e.target.value})
   }
 
   render(){
@@ -54,4 +50,4 @@ class Addpostview extends React.Component {
   }
 }
 
-export default Addpostview;
+export default connect(null,{Addpost})(Addpostview);
