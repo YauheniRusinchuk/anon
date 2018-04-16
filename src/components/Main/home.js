@@ -12,9 +12,10 @@ class Home extends React.Component {
 
   render(){
     const {addPost} = this.props
+    const result = addPost.reverse()
     return(
       <div>
-          {console.log(addPost)}
+          {console.log(result)}
       </div>
     );
   }

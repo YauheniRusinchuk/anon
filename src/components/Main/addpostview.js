@@ -10,7 +10,8 @@ class Addpostview extends React.Component {
 
   state = {
     title: '',
-    content: ''
+    content: '',
+    counter: 0
   }
 
   onSubmit = (e) => {
@@ -21,7 +22,8 @@ class Addpostview extends React.Component {
 
   onChange = (e) => {
     this.setState({
-      [e.target.name] : e.target.value})
+      [e.target.name] : e.target.value
+      })
   }
 
   render(){
