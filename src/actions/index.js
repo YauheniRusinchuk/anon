@@ -1,8 +1,16 @@
-import {ADD_POST} from './actionTypes';
+import {ADD_POST, ADD_COMMENT} from './actionTypes';
+
+
+export function AddComment(data) {
+  return {
+    type: ADD_COMMENT,
+    data
+  }
+}
 
 
 
-export default function AddPost(data) {
+export function AddPost(data) {
   return {
     type: ADD_POST,
     data

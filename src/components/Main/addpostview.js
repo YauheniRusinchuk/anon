@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Addpost from '../../actions/index';
+import {AddPost} from '../../actions/index';
 
 
 class Addpostview extends React.Component {
@@ -16,7 +16,7 @@ class Addpostview extends React.Component {
   onSubmit = (e) => {
     this.props.onSubmit(e)
     this.setState({title: '', content: ''})
-    this.props.Addpost(this.state);
+    this.props.AddPost(this.state);
   }
 
   onChange = (e) => {
@@ -51,4 +51,4 @@ class Addpostview extends React.Component {
   }
 }
 
-export default connect(null,{Addpost})(Addpostview);
+export default connect(null,{AddPost})(Addpostview);
