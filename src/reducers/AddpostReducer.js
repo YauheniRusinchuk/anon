@@ -6,6 +6,16 @@ const initialState = [
 
 ]
 
+function makeCounter() {
+  let currentCount = 1;
+
+  return function() {
+    return currentCount++;
+  };
+}
+
+let counter = makeCounter();
+
 
 export default function addPost(state=initialState,action) {
   switch (action.type) {
@@ -13,7 +23,7 @@ export default function addPost(state=initialState,action) {
       return [
         ...state,
         {
-          id: Math.random(),
+          id: counter(),
           title: action.data.title,
           content: action.data.content
         }

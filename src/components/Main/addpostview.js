@@ -11,7 +11,6 @@ class Addpostview extends React.Component {
   state = {
     title: '',
     content: '',
-    counter: 0
   }
 
   onSubmit = (e) => {
