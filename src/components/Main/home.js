@@ -12,8 +12,7 @@ class Home extends React.Component {
 
   render(){
     const {addPost} = this.props
-    const result = addPost.reverse()
-    const body = result.map((item)=>{
+    const body = addPost.map((item)=>{
       return(
           <div key={item.id}>
             <p>{item.title}</p>

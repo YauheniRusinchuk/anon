@@ -13,14 +13,15 @@ let counter = makeCounter();
 export default function addPost(state=[],action) {
   switch (action.type) {
     case ADD_POST:
-      return [
+        return [
         ...state,
         {
           id: counter(),
           title: action.data.title,
-          content: action.data.content
+          content: action.data.content,
+          comments: []
         }
-      ]
+      ].reverse()
     default:
       return state;
   }
