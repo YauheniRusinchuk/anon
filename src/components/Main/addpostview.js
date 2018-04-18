@@ -39,8 +39,13 @@ class Addpostview extends React.Component {
               name = "content"
              className="two"></textarea>
   			     <div className="button_add_post">
-  				      <input  className="three" type="submit" value="Add" / >
-  			     </div>
+                <input  style={{display:'none'}}
+                        type="file"
+                        ref={fileInput=>this.fileInput = fileInput}
+                        />
+                <button className="three addfile" onClick={()=>this.fileInput.click()}>add file</button>
+  				      <input  className="three" type="submit" value="Add Post" / >
+             </div>
   		    </form>
   	   </div>
     </div>

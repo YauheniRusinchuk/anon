@@ -119,4 +119,9 @@ form .three {
 	outline: none;
 	cursor: pointer;
   box-shadow: 0 0 10px grey;
+  text-transform: uppercase;
+}
+
+form .addfile {
+  margin-right: 10px;
 }
