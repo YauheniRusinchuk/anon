@@ -1,7 +1,45 @@
-.main {
+
+ .main {
   width: 95%;
   margin: 60px auto;
 }
+
+/* POSTVIEW  */
+
+.homepageview {
+    -moz-column-width: 350px;
+     -webkit-column-width: 350px;
+   -moz-column-gap: 20px;
+   -webkit-column-gap: 20px;
+}
+
+.postview {
+  display: inline-block;
+  width:  100%;
+  margin-bottom: 5px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+
+.postview_title {
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline;
+  padding: 10px;
+}
+
+.postview_content {
+  color: grey;
+  font-size: 13px;
+  padding: 5px;
+}
+
+/* END POST */
 
 
 .addpostview {

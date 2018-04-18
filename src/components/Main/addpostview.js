@@ -4,9 +4,6 @@ import {AddPost} from '../../actions/index';
 
 
 class Addpostview extends React.Component {
-  constructor(props) {
-    super(props)
-  }
 
   state = {
     title: '',
@@ -14,7 +11,7 @@ class Addpostview extends React.Component {
   }
 
   onSubmit = (e) => {
-    this.props.onSubmit(e)
+    e.preventDefault();
     this.setState({title: '', content: ''})
     this.props.AddPost(this.state);
   }

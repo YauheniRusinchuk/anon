@@ -1,6 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import PostView from './postview';
+
+
 
 const mapToStateProps = (state) => {
   return {
@@ -12,17 +15,18 @@ class Home extends React.Component {
 
   render(){
     const {addPost} = this.props
-    const body = addPost.map((item)=>{
-      return(
-          <div key={item.id}>
-            <p>{item.title}</p>
-            <p>{item.content}</p>
-          </div>
-      );
-    })
     return(
-      <div>
-        {body}
+      <div className="homepageview">
+        {
+          addPost.map((item,index)=>{
+            return(
+                <PostView key={item.id}
+                          title={item.title}
+                          content={item.content}
+                />
+            );
+          })
+        }
       </div>
     );
   }
