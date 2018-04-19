@@ -25,18 +25,25 @@
 
 
 .postview_title {
-  font-size: 14px;
+  width: 100%;
+	text-align: center;
+	padding: 10px;
   color: black;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: underline;
-  padding: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .postview_content {
-  color: grey;
-  font-size: 13px;
-  padding: 5px;
+    padding: 10px;
+  	text-align: center;
+  	font-size: 13px;
+  	color: grey;
+}
+
+
+.postview_count {
+  color: #1484b8;
+  font-size: 10px;
 }
 
 /* END POST */

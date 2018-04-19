@@ -12,8 +12,14 @@ class Addpostview extends React.Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    this.setState({title: '', content: ''})
-    this.props.AddPost(this.state);
+    const {title,content} = this.state;
+    if(title && content) {
+        this.props.AddPost(this.state);
+        this.setState({title: "", content: ""})
+    }else {
+      return false
+    }
+
   }
 
   onChange = (e) => {

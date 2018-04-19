@@ -20,7 +20,7 @@ class PostView extends React.Component {
       <div className= "postview">
         <Link onClick={this.handlePostViews} className="postview_title" to='/' >{title}</Link>
         <p className="postview_content">{content}</p>
-        <p> views: {this.state.views} </p>
+        <p className="postview_count"> views: {this.state.views} </p>
       </div>
     );
   }
