@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import { Redirect } from 'react-router-dom'
 import {AddPost} from '../../actions/index';
 
 
@@ -8,6 +9,7 @@ class Addpostview extends React.Component {
   state = {
     title: '',
     content: '',
+    redirect: false
   }
 
   onSubmit = (e) => {
@@ -15,7 +17,7 @@ class Addpostview extends React.Component {
     const {title,content} = this.state;
     if(title && content) {
         this.props.AddPost(this.state);
-        this.setState({title: "", content: ""})
+        this.setState({title: "", content: "", redirect: true})
     }else {
       return false
     }
@@ -29,7 +31,7 @@ class Addpostview extends React.Component {
   }
 
   render(){
-    const {title,content} = this.state
+    const {title,content,redirect} = this.state
       return(
       <div className='addpostview'>
         <div className="container">
@@ -52,6 +54,7 @@ class Addpostview extends React.Component {
                 <button className="addfile" onClick={()=>this.fileInput.click()}>add file</button>
   				      <input  className="three" type="submit" value="Add Post" / >
              </div>
+             {redirect && <Redirect to="/" />}
   		    </form>
   	   </div>
     </div>
