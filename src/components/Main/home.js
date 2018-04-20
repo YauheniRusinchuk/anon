@@ -21,6 +21,7 @@ class Home extends React.Component {
           addPost.map((item,index)=>{
             return(
                 <PostView key={item.id}
+                          id={item.id}
                           title={item.title}
                           content={item.content}
                 />

@@ -15,10 +15,10 @@ class PostView extends React.Component {
   }
 
   render(){
-    const {title,content} = this.props
+    const {id,title,content} = this.props
     return(
       <div className= "postview">
-        <Link onClick={this.handlePostViews} className="postview_title" to='/' >{title}</Link>
+        <Link onClick={this.handlePostViews} className="postview_title" to={`/${id}`}>{title}</Link>
         <p className="postview_content">{content}</p>
         <p className="postview_count"> views: {this.state.views} </p>
       </div>
